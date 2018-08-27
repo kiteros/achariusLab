@@ -28,7 +28,9 @@ session_start();
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">AchariusLab</a>
+        <a class="navbar-brand" href="self/index.php">
+  <img style="vertical-align:middle" src="img/user.png" height="20px" width="20px">
+  <span style="">My account</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,36 +58,13 @@ session_start();
     <!-- Page Content -->
     <div class="container">
 
-      <h1 class="my-4 text-center text-lg-left">All your parcels</h1>
+      <h1 class="my-4 text-center text-lg-left">Healthiest parcels</h1>
 
       <div class="row text-center text-lg-left">
 
     <?php
 
-      //select all parcels owned by user
-      try
-      {
-        $bdd = new PDO('mysql:host=jeschbacplbdd.mysql.db;dbname=jeschbacplbdd;charset=utf8', 'jeschbacplbdd', 'Jules1234FTP');
-      }
-      catch(Exception $e)
-      {
-        die('Erreur : '.$e->getMessage());
-      }
-      $searchparcels = $bdd->prepare('SELECT * FROM acharius_parcelles WHERE id_owner = :id');
-      $searchparcels->execute(array(
-        'id' => $_SESSION['id']
-      ));
-      while($data = $searchparcels->fetch()){
-        //print all owned parcels
-        ?>
-        <div class="col-lg-3 col-md-4 col-xs-6">
-          <a href="../stream/index.php?id=<?php echo $data['id'];?>" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            <center><p class="t-below"><?php echo $data['name']; ?></p></center>
-          </a>
-        </div>
-        <?php
-      }
+      
 
      ?>
 

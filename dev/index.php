@@ -1,3 +1,10 @@
+<script>
+if (location.protocol != 'https:')
+{
+ location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+}
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
 
   </head>
 
@@ -48,8 +55,8 @@
       <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
           <h1 class="mx-auto my-0 text-uppercase">AchariusLab</h1>
-          <h2 class="text-white-50 mx-auto mt-2 mb-5">A new modern way to grow food.</h2>
-          <a href="login/index.html" class="btn btn-primary js-scroll-trigger">Log In</a>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5">- a new way to grow food -</h2>
+          <a href="login/index.php" class="btn btn-primary js-scroll-trigger">Log In</a>
         </div>
       </div>
     </header>
@@ -59,12 +66,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">Built with Bootstrap 4</h2>
-            <p class="text-white-50">Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+            <h2 class="text-white mb-4">Our goal</h2>
+            <p class="text-white-50">AchariusLab wants to provide a new way to grow food by using new technology. We want to simplify the food growing process by giving the user a total control of the plant.</p>
           </div>
         </div>
-        <img src="img/ipad.png" class="img-fluid" alt="">
+        <img src="img/smallplant.png" class="img-fluid" alt="">
       </div>
     </section>
 
@@ -155,7 +161,7 @@
                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                 <h4 class="text-uppercase m-0">Address</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                <div class="small text-black-50">Lyon, France</div>
               </div>
             </div>
           </div>
@@ -167,7 +173,7 @@
                 <h4 class="text-uppercase m-0">Email</h4>
                 <hr class="my-4">
                 <div class="small text-black-50">
-                  <a href="#">hello@yourdomain.com</a>
+                  <a href="mailto:contact@achariuslab.com">contact@achariuslab.com</a>
                 </div>
               </div>
             </div>
@@ -179,14 +185,14 @@
                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
                 <h4 class="text-uppercase m-0">Phone</h4>
                 <hr class="my-4">
-                <div class="small text-black-50">+1 (555) 902-8832</div>
+                <div class="small text-black-50">not yet</div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="social d-flex justify-content-center">
-          <a href="#" class="mx-2">
+          <a href="http://www.twitter.com/achariuslab" target="_blank" class="mx-2">
             <i class="fab fa-twitter"></i>
           </a>
           <a href="#" class="mx-2">
@@ -203,7 +209,7 @@
     <!-- Footer -->
     <footer class="bg-black small text-center text-white-50">
       <div class="container">
-        Copyright &copy; Your Website 2018
+        Copyright &copy; AchariusLab 2018
       </div>
     </footer>
 

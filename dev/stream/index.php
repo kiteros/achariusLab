@@ -1,5 +1,12 @@
-<?php
+<script>
+if (location.protocol != 'http:')
+{
+ location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
+}
+</script>
 
+<?php
+session_start();
 //get ip adress
 try
 {
@@ -44,8 +51,11 @@ if(isset($_GET['id'])){
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+
     <!-- Custom styles for this template -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
 
 </head>
 
@@ -109,6 +119,15 @@ if(isset($_GET['id'])){
                               // Update the current slider value (each time you drag the slider handle)
                               slider1.oninput = function() {
                                   output1.innerHTML = this.value + "%";
+                                  //send ajax request
+                                  $.ajax({
+                                    url: "https://io.adafruit.com/api/groups/achariuslab/send.json?x-aio-key=8e922f35586e4b5cad515d3e0ac1343a&light=" + this.value,
+                                    cache: false,
+                                    success: function(html){
+
+                                    }
+                                  });
+
                               }
                             </script>
                           </li>
@@ -168,7 +187,7 @@ if(isset($_GET['id'])){
 
                   </ul>
                   <li class="nav-item" data-toggle="tooltip" data-placement="right">
-                    <a class="nav-link nav-link-collapse collapsed" href="../index.html" >
+                    <a class="nav-link nav-link-collapse collapsed" href="../account/" >
                       <span class="nav-link-text">Exit</span>
                     </a>
                   </li>
@@ -182,7 +201,7 @@ if(isset($_GET['id'])){
         <div id="page-content-wrapper">
             <div class="container-fluid">
 
-                <center><iframe  src="http://<?php echo $ip; ?>:<?php echo $gate; ?>"
+                <center><iframe  src="http://192.168.0.14:8081/"
                     frameBorder="0" width="700px" height="520px"></iframe></center><center>
                     <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle">Open Menu</a></center>
 

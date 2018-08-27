@@ -22,18 +22,18 @@ if(isset($_POST['email'])){
   if($nb > 0){
     //users exists
     //check password
-    echo 'user exists';
     if(strcmp($data['password'],$pass) == 0){
       //user can connect
       session_start();
       $_SESSION['id'] = $data['id'];
       header('Location: ../account/index.php');
     }else{
-      header('Location: index.html');
+      //password not valid
+      header('Location: index.php?er=0');
     }
   }else{
-    echo 'user not found';
-    header('Location: index.html');
+    //User not found
+    header('Location: index.php?er=1');
   }
 
 }

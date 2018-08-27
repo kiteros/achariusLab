@@ -81,8 +81,16 @@ session_start();
         ?>
         <div class="col-lg-3 col-md-4 col-xs-6">
           <a href="../stream/index.php?id=<?php echo $data['id'];?>" class="d-block mb-4 h-100">
-            <img class="img-fluid img-thumbnail" src="http://placehold.it/400x300" alt="">
-            <center><p class="t-below"><?php echo $data['name']; ?></p></center>
+            <?php
+            //test si la connexion fonctionne
+            if(1){
+              ?>
+              <img class="img-fluid img-thumbnail" src="img/plantwait.png" alt="">
+              <center><p class="t-below"><?php echo $data['name']; ?></p></center>
+              <?php
+            }
+             ?>
+
           </a>
         </div>
         <?php

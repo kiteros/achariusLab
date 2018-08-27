@@ -28,14 +28,16 @@ session_start();
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">My account</a>
+        <a class="navbar-brand" href="self/index.php">
+  <img style="vertical-align:middle" src="img/user.png" height="20px" width="20px">
+  <span style="">My account</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.php">Exemples
+              <a class="nav-link" href="index.php">My parcels
 
               </a>
             </li>
@@ -56,7 +58,7 @@ session_start();
     <!-- Page Content -->
     <div class="container">
 
-      <h1 class="my-4 text-center text-lg-left">All your parcels</h1>
+      <h1 class="my-4 text-center text-lg-left">Showcasing some exemples</h1>
 
       <div class="row text-center text-lg-left">
 
